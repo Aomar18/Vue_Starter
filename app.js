@@ -5,7 +5,9 @@ new Vue({
         Name: 'Ahmed',
         age: 26,
         github: "https://github.com/Aomar18",
-        webTag: '<a href="https://github.com/Aomar18">Ahmeds Github</a>'
+        webTag: '<a href="https://github.com/Aomar18">Ahmeds Github</a>',
+        x: 0,
+        y: 0
     },
     methods: {
         add:function(inc){
@@ -16,7 +18,11 @@ new Vue({
         },
         greet:function(time){
             return 'Good ' + time
-         }
-         
+         },
+        updateXY:function(event){
+            this.x = event.offsetX;
+            this.y = event.offsetY;
+
+        }
     }
 })

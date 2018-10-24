@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-    
+    <link href="styles.css" rel="stylesheet"/>
     <title>Vue!</title>
 </head>
 
@@ -15,7 +15,8 @@
     <div id="vue-app">
 
            Name: <input v-model="Name"/>
-            <br>
+           <input type="text" v-bind:value="Name">
+           <br>
            Message: <input v-model="message"  />
         <p>{{greet('Afternoon')}}: {{Name}}</p> 
         What is on the agenda today: {{message}}
@@ -26,12 +27,12 @@
 
 
         <!-- data binding -->
-       1. data binding from app js:<a :href="github">Ahmed's Github</a>
+       1. data binding from app js:<a v-bind:href="github">Ahmed's Github</a>
 <br>
 <br>
        2. Sourcing Html from app.js:<span v-html="webTag"></span>
 <br>
-<input type="text" v-bind:value="Name">
+
 
 <p>My age is {{age}}</p>
 <!-- dont need to add parantheses to function when it is attached to an event-->
@@ -43,7 +44,9 @@
 <button v-on:dblclick="subtract(10)">Take 10 years</button>
 
 
-
+<div id="canvas" v-on:mousemove="updateXY">
+{{x}},{{y}}
+</div>
 
 
 
