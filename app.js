@@ -3,7 +3,8 @@ new Vue({
     data: {
         message: '',
         Name: '',
-        github: "https://github.com/Aomar18"
+        github: "https://github.com/Aomar18",
+        webTag: '<a href="https://github.com/Aomar18">Ahmeds Github</a>'
     },
     methods: {
         greet:function(time){
