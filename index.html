@@ -11,15 +11,34 @@
 </head>
 
 <body>
-    <h1>First Vue Application</h1>
+    <h1>  First Vue Application</h1>
     <div id="vue-app">
+
            Name: <input v-model="Name"/>
             <br>
            Message: <input v-model="message"  />
-        <p>{{greet('morning')}} {{Name}}</p> 
+        <p>{{greet('Afternoon')}}: {{Name}}</p> 
         What is on the agenda today: {{message}}
         <br>
+
+
+        <p>Visit your github?</p>
+
+
+        <!-- data binding -->
+        <a :href="github">Github</a>
     </div>
+
+
+
+
+
+
+
+
+    <!-- Sourced javascript file -->
+    <!-- only works at bottom for  -->
+    <!-- some reason -- more research required -->
 
     <script src="app.js"></script>
 </body>
