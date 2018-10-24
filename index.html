@@ -51,6 +51,22 @@
 
 <!-- Link to repo from the youtube tutorial on wednesday -->
 <a v-on:click.prevent="click" href="https://vuejs.org/v2/guide/">Click ME!</a>
+
+
+<h4>Keyboard events</h4>
+
+<label>Dog:</label>
+<input type="text" v-model="dog"
+@keyup.enter="logDog">
+<label>Cat</label>
+<input type="text" @keyup.alt.enter="logCat">
+
+
+
+
+
+
+
 </div>
     <!-- Sourced javascript file -->
     <!-- only works at bottom for  -->

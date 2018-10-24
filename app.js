@@ -7,7 +7,9 @@ new Vue({
         github: "https://github.com/Aomar18",
         webTag: '<a href="https://github.com/Aomar18/Vue_Starter">My Vue Repo</a>',
         x: 0,
-        y: 0
+        y: 0,
+        dog: '',
+        cat:''
     },
     methods: {
         add:function(inc){
@@ -25,6 +27,14 @@ new Vue({
         },
         click:function(){
             alert("Sorry You Can't Go There!")
+        },
+        logDog: function(){
+            console.log('You entered a dog');
+            
+        },
+        logCat: function(){
+            console.log('You entered a cat');
+
         }
 
     }
