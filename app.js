@@ -1,6 +1,12 @@
 new Vue({
     el: '#vue-app',
     data: {
-        'message': 'hello World'
+        message: '',
+        Name: ''
+    },
+    methods: {
+        greet:function(time){
+            return 'good ' + time
+         }
     }
 })
