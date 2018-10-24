@@ -2,7 +2,8 @@ new Vue({
     el: '#vue-app',
     data: {
         message: '',
-        Name: '',
+        Name: 'Ahmed',
+        age: 26,
         github: "https://github.com/Aomar18",
         webTag: '<a href="https://github.com/Aomar18">Ahmeds Github</a>'
     },

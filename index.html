@@ -30,14 +30,22 @@
 <br>
 <br>
        2. Sourcing Html from app.js:<span v-html="webTag"></span>
+<br>
+<input type="text" v-bind:value="Name">
+
+<p>My age is {{age}}</p>
+<button v-on:click="age++">Add a year</button>
+<button v-on:click="age--">Take a year</button>
 
 
 
-    </div>
+
+
+
+</div>
     <!-- Sourced javascript file -->
     <!-- only works at bottom for  -->
     <!-- some reason -- more research required -->
-
     <script src="app.js"></script>
 </body>
 
