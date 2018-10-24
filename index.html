@@ -34,8 +34,13 @@
 <input type="text" v-bind:value="Name">
 
 <p>My age is {{age}}</p>
-<button v-on:click="add">Add a year</button>
-<button v-on:click="subtract">Take a year</button>
+<!-- dont need to add parantheses to function when it is attached to an event-->
+
+<button v-on:click="add(1)">Add a year</button>
+<button v-on:click="subtract(1)">Take a year</button>
+<br>
+<button v-on:dblclick="add(10)">Add 10 year</button>
+<button v-on:dblclick="subtract(10)">Take 10 years</button>
 
 
 
