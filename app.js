@@ -5,7 +5,7 @@ new Vue({
         Name: 'Ahmed',
         age: 26,
         github: "https://github.com/Aomar18",
-        webTag: '<a href="https://github.com/Aomar18">Ahmeds Github</a>',
+        webTag: '<a href="https://github.com/Aomar18/Vue_Starter">My Vue Repo</a>',
         x: 0,
         y: 0
     },
