@@ -31,7 +31,7 @@
 
         2. Sourcing Html from app.js:
         <br>
-        <span v-html="webTag"></span>
+        <p v-html="webTag"></p>
         <br>
 
 
@@ -46,7 +46,29 @@
 
 
         <div id="canvas" @mousemove="updateXY">
-            {{x}},{{y}}
+            
+
+
+            <br>
+            <br>
+
+            <div v-on:click="available=!available" v-bind:class="{available: !available}">
+                <span> {{x}},{{y}} </span>
+            </div>
+
+
+
+            <br>
+            <button v-on:click="a++">Add to A</button>
+            <br>
+            <button v-on:click="b++">Add to B</button>
+            <p>A ---- {{a}}</p>
+            <p>B ---- {{b}}</p>
+            <br>
+
+            <p>Age + A = {{ addToA }}</p>
+            <p>Age + B = {{ addToB }}</p>
+
         </div>
 
         <!-- Link to repo from the youtube tutorial on wednesday -->
@@ -56,22 +78,15 @@
         <h4>Keyboard events</h4>
 
         <label>Dog:</label>
-        <input type="text" v-model="dog" @keyup.enter="logDog">
+        <input type="text" v-model="dog" @keydown.enter="logDog">
         <label>Cat</label>
-        <input type="text" @keyup.alt.enter="logCat">
+        <input type="text" @keydown.alt.enter="logCat">
 
 
 
 
-       
-        <p>A --- {{a}}</p>
-        <p>B --- {{b}}</p>
-        <br>
-        <button v-on:click="a++">Add to A</button>
-        <button v-on:click="b++">Add to B</button>
-        <br>
-        <p>Age + A = {{ addToA }}</p>
-        <p>Age + B = {{ addToB }}</p>
+
+
 
     </div>
     <!-- Sourced javascript file -->

@@ -12,7 +12,9 @@ new Vue({
         a: 0,
         b: 0,
         dog: '',
-        cat: ''
+        cat: '',
+        available: true,
+        nearby: false,
     },
     methods: {
         add: function (inc) {
@@ -41,6 +43,12 @@ new Vue({
         }
     },
     computed: {
+        compClasses: function(){
+            return{
+                available: this.available,
+                nearby: this.nearby
+            }
+        },
         addToA: function () {
             return this.a + this.number
         },
