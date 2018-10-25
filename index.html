@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <link href="styles.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"> -->
     <title>Vue!</title>
 </head>
 
@@ -90,10 +90,11 @@
         <label>Name:</label>
         <input v-model="form.name" 
         class="input"
-         type="text"
-         v-bind:class="{'is-danger': errors.has('name')}"
-         v-validate="'required|min:3'">
+         type="text">
         
+         <!-- v-bind:class="{'is-danger': errors.has('name')}"
+         v-validate="'required|min:3'" -->
+
         <br>
         <br>
         <label class="label">Message:</label>
