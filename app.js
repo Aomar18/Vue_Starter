@@ -15,6 +15,10 @@ new Vue({
         cat: '',
         available: true,
         nearby: false,
+        form: {
+            name: '',
+            message: ''
+        },
     },
     methods: {
         add: function (inc) {

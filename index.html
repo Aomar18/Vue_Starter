@@ -46,7 +46,7 @@
 
 
         <div id="canvas" @mousemove="updateXY">
-            
+
 
 
             <br>
@@ -84,7 +84,25 @@
 
 
 
+        <h1> Form Begins Here:::</h1>
+        <label>Name:</label>
+        <input v-model="form.name" class="input" type="text">
+        
+        <br>
+        <br>
+        <label class="label">Message:</label>
 
+        
+          <textarea class="textarea" v-model="form.message"></textarea>
+        
+
+
+        <ul>
+            <li v-for="(item, k) in form">
+                <strong>{{ k }}:</strong> {{ item }}
+            </li>
+
+        </ul>
 
 
 
