@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <link href="styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <title>Vue!</title>
 </head>
 
 <body>
-    <h1> First Vue Application</h1>
-    <div id="vue-app">
 
+    <h1> Hyperbolic Vue </h1>
+    <div id="vue-app">
+<div id="words">
         Name: <input v-model="Name" />
         <input type="text" v-bind:value="Name">
         <br>
@@ -32,8 +34,6 @@
         2. Sourcing Html from app.js:
         <br>
         <p v-html="webTag"></p>
-        <br>
-
 
         <p>My age is {{age}}</p>
         <!-- dont need to add parantheses to function when it is attached to an event-->
@@ -44,9 +44,11 @@
         <button @dblclick="add(10)">Add 10 year</button>
         <button v-on:dblclick="subtract(10)">Take 10 years</button>
 
-
+    </div>
         <div id="canvas" @mousemove="updateXY">
 
+
+            <p> Illicitly Indistinguishable && Illogically Immeasurable innumerable idioms</p>
 
 
             <br>
@@ -86,7 +88,11 @@
 
         <h1> Form Begins Here:::</h1>
         <label>Name:</label>
-        <input v-model="form.name" class="input" type="text">
+        <input v-model="form.name" 
+        class="input"
+         type="text"
+         v-bind:class="{'is-danger': errors.has('name')}"
+         v-validate="'required|min:3'">
         
         <br>
         <br>

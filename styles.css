@@ -16,6 +16,14 @@ span {
     font-size: 2em;
 }
 
+
+#words {
+    border: 1px dashed #333;
+    
+
+}
+
+
  .available span {
      background: green;
  }
