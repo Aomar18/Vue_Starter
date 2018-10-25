@@ -6,68 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-    <link href="styles.css" rel="stylesheet"/>
+    <link href="styles.css" rel="stylesheet" />
     <title>Vue!</title>
 </head>
 
 <body>
-    <h1>  First Vue Application</h1>
+    <h1> First Vue Application</h1>
     <div id="vue-app">
 
-           Name: <input v-model="Name"/>
-           <input type="text" v-bind:value="Name">
-           <br>
-           Message: <input v-model="message"  />
-        <p>{{greet('Afternoon')}}: {{Name}}</p> 
+        Name: <input v-model="Name" />
+        <input type="text" v-bind:value="Name">
+        <br>
+        Message: <input v-model="message" />
+        <p>{{greet('Afternoon')}}: {{Name}}</p>
         What is on the agenda today: {{message}}
         <br>
         <br>
         <!-- data binding -->
-       1. data binding from app js:
-       <br>
-       <a v-bind:href="github">Ahmed's Github</a>
-<br>
-<br>
+        1. data binding from app js:
+        <br>
+        <a v-bind:href="github">Ahmed's Github</a>
+        <br>
+        <br>
 
-       2. Sourcing Html from app.js:
-       <br>
-       <span v-html="webTag"></span>
-<br>
-
-
-<p>My age is {{age}}</p>
-<!-- dont need to add parantheses to function when it is attached to an event-->
-
-<button @click.once="add(1)">Add a year</button>
-<button v-on:click="subtract(1)">Take a year</button>
-<br>
-<button @dblclick="add(10)">Add 10 year</button>
-<button v-on:dblclick="subtract(10)">Take 10 years</button>
+        2. Sourcing Html from app.js:
+        <br>
+        <span v-html="webTag"></span>
+        <br>
 
 
-<div id="canvas" @mousemove="updateXY">
-{{x}},{{y}}
-</div>
+        <p>My age is {{age}}</p>
+        <!-- dont need to add parantheses to function when it is attached to an event-->
 
-<!-- Link to repo from the youtube tutorial on wednesday -->
-<a v-on:click.prevent="click" href="https://vuejs.org/v2/guide/">Click ME!</a>
+        <button @click.once="add(1)">Add a year</button>
+        <button v-on:click="subtract(1)">Take a year</button>
+        <br>
+        <button @dblclick="add(10)">Add 10 year</button>
+        <button v-on:dblclick="subtract(10)">Take 10 years</button>
 
 
-<h4>Keyboard events</h4>
+        <div id="canvas" @mousemove="updateXY">
+            {{x}},{{y}}
+        </div>
 
-<label>Dog:</label>
-<input type="text" v-model="dog"
-@keyup.enter="logDog">
-<label>Cat</label>
-<input type="text" @keyup.alt.enter="logCat">
+        <!-- Link to repo from the youtube tutorial on wednesday -->
+        <a v-on:click.prevent="click" href="https://vuejs.org/v2/guide/">Click ME!</a>
 
+
+        <h4>Keyboard events</h4>
+
+        <label>Dog:</label>
+        <input type="text" v-model="dog" @keyup.enter="logDog">
+        <label>Cat</label>
+        <input type="text" @keyup.alt.enter="logCat">
 
 
 
 
+       
+        <p>A --- {{a}}</p>
+        <p>B --- {{b}}</p>
+        <br>
+        <button v-on:click="a++">Add to A</button>
+        <button v-on:click="b++">Add to B</button>
+        <br>
+        <p>Age + A = {{ addToA }}</p>
+        <p>Age + B = {{ addToB }}</p>
 
-
-</div>
+    </div>
     <!-- Sourced javascript file -->
     <!-- only works at bottom for  -->
     <!-- some reason -- more research required -->
